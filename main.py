@@ -30,4 +30,14 @@ async def repeat(ctx, times: int, content: str):
     for i in range(times):
         await ctx.send(content)
 
-bot.run("BOT_TOKEN_HERE")
+@bot.command()
+async def plastic(ctx):
+    list_plas = ['Пластик можно переработать в красивую игрушку, например, сделать из пластиковой бутыки кормушку для птиц.', 'Пластик можно переплавить и сделать из него посуду для пищи.', 'Отрезав верхнюю часть пластиковой бутылки, можно сделать пенал, дополнительно украсив его']
+    await ctx.send(random.choice(list_plas))
+
+@bot.command()
+async def metal(ctx):
+    list_met = ['Любой металл можно отнести в пункты сдачи, даже получив за него вознаграждение.', 'Металл можно принести мастеру и он переплавит его во что-либо нужное.']
+    await ctx.send(random.choice(list_met))
+
+bot.run("")
